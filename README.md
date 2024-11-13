@@ -32,12 +32,12 @@ The CSV PARSER is a Streamlit application that allows users to upload a CSV file
 ### Installation
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/web-parser.git
+   git clone https://github.com/Vincenzo-Verma/csv_parser.git
    cd csv-parser
    ```
 2. Install required libraries:
    ```
-   pip install -r requirements.txt
+   pip install streamlit pandas gspread oauth2client google-api-python-client python-dotenv google-search-results groq
    ```
 3. Setup Environment Variables:
    - Move/Rename the `.env_example` file to `.env` and put the respected API keys.

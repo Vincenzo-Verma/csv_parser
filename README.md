@@ -51,3 +51,6 @@ The CSV PARSER is a Streamlit application that allows users to upload a CSV file
    ```
    streamlit run app.py
    ```
+---
+
+### [Video Demonstration](https://www.loom.com/share/8d5bd7a4651843db92d1c594b136634d?sid=7d9d0015-14f7-4d4f-9da7-9396e74d3394)

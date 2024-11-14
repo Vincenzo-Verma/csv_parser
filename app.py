@@ -95,7 +95,7 @@ if data is not None and column:
     st.write(data[column])
     prompt_input = st.text_input("Enter your custom prompt (use {entity} as a placeholder)")
     st.write("Example: 'Find the latest news about {entity}'")
-    start, end = st.slider("Select the range of entities to search", 0, len(data[column]), (0, min(5, len(data[column]))))
+    start, end = st.slider("Select the range of entities to search", g0, len(data[column]), (0, min(5, len(data[column]))))
 
 if data is not None and column and prompt_input:
     results = []
@@ -111,5 +111,5 @@ if data is not None and column and prompt_input:
     
     output_file = 'output.csv'
     output_df.to_csv(output_file, index=False)
-    # st.download_button(label="Download Results", data=output_file, file_name='output.csv', mime='text/csv')
+    st.download_button(label="Download Results", data=output_file, file_name='output.csv', mime='text/csv')
 

@@ -90,13 +90,16 @@ elif credentials_json is not None and sheet_name:
 
 if data is not None:
     column = st.selectbox("Select the column for the query", data.columns)
-
-prompt_input = st.text_input("Enter your custom prompt (use {entity} as a placeholder)")
-st.write("Example: 'Find the latest news about {entity}'")
+if data is not None and column:
+    st.subheader('Selected Column Data Preview')
+    st.write(data[column])
+    prompt_input = st.text_input("Enter your custom prompt (use {entity} as a placeholder)")
+    st.write("Example: 'Find the latest news about {entity}'")
+    start, end = st.slider("Select the range of entities to search", 0, len(data[column]), (0, min(5, len(data[column]))))
 
 if data is not None and column and prompt_input:
     results = []
-    for entity in range(min(len(data[column]), MAX_LIMIT)):
+    for entity in range(start, end):
         search_query = f'{prompt_input} for {data[column][entity]}'#.replace(f"{entity}", data[column][entity])
         search_results = google_search(search_query)
         parsed_result = parse_results(search_results, search_query)

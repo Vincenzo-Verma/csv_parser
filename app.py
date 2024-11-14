@@ -111,5 +111,5 @@ if data is not None and column and prompt_input:
     
     output_file = 'output.csv'
     output_df.to_csv(output_file, index=False)
-    st.download_button(label="Download Results", data=output_file, file_name='output.csv', mime='text/csv')
+    # st.download_button(label="Download Results", data=output_file, file_name='output.csv', mime='text/csv')
 

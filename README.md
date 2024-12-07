@@ -33,7 +33,7 @@ The CSV PARSER is a Streamlit application that allows users to upload a CSV file
 1. Clone the repository:
    ```
    git clone https://github.com/Vincenzo-Verma/csv_parser.git
-   cd csv-parser
+   cd csv_parser
    ```
 2. Install required libraries:
    ```
